@@ -91,15 +91,18 @@ function buildProfile(profileData) {
     blogElement.innerText = `${profileData.blog}`
     blogElement.href = profileData.blog
     pageElement.appendChild(blogElement)
-    //email
-    let emailElement = document.createElement("a")
-    emailElement.innerText = "\nd.ortizkosobucki@gmail.com"
-    emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
-    pageElement.appendChild(emailElement)
+
     //publicrepos
     let reposElement = document.createElement("p")
     reposElement.innerText = `Public Repos: ${profileData.public_repos}, see below!`
     pageElement.appendChild(reposElement)
+    //email
+    let emailElement = document.createElement("a")
+    emailElement.innerText = "Contact at d.ortizkosobucki@gmail.com"
+    emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
+    pageElement.appendChild(emailElement)
+
+
     //final append to the profile stuff 
     profileStuff.appendChild(pageElement)
 }

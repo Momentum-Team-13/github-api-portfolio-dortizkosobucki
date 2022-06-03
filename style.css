@@ -17,35 +17,34 @@ body {
 
 h1 {
     text-align: center;
-    background-color: aqua;
+    background-color: rgba(0, 221, 255, 0.551);
+    border-radius: 50px;
 }
 
 p {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.551);
     padding: 30px;
     text-align: center;
-}
-
-#repos {
-    border: 2px dashed red;
-    background-color: black;
-}
-
-a {
-    padding: 5px;
-    display: flex;
-    flex-flow: wrap column;
-    text-decoration: none;
-    text-align: center;
+    border: 2px white dashed;
 }
 
 img {
     border-radius: 50%;
-    border: 2px solid black;
+    border: 5px solid white;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+}
+
+a {
+    padding: 30px;
+    display: flex;
+    flex-flow: wrap column;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.551);
+    border: 2px dashed white;
 }
 
 a:link {
