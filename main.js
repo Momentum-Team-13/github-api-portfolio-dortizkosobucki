@@ -36,6 +36,7 @@ function buildRepo(repoName) {
     let repoEl = document.createElement("a")
     repoEl.innerText = repoName.name
     repoEl.href = repoName.html_url
+    repoEl.classList.add("repoList")
     repoStuff.appendChild(repoEl)
 }
 
@@ -90,6 +91,7 @@ function buildProfile(profileData) {
     let blogElement = document.createElement("a")
     blogElement.innerText = `${profileData.blog}`
     blogElement.href = profileData.blog
+    blogElement.classList.add("linkedIn")
     pageElement.appendChild(blogElement)
 
     //publicrepos
@@ -100,6 +102,7 @@ function buildProfile(profileData) {
     let emailElement = document.createElement("a")
     emailElement.innerText = "Contact at d.ortizkosobucki@gmail.com"
     emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
+    emailElement.classList.add("email")
     pageElement.appendChild(emailElement)
 
 
