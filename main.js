@@ -41,7 +41,7 @@ function buildRepo(repoName) {
 
 //PROFILE THINGS//
 
-const profileStuff = document.querySelector('#profile')
+const profileStuff = document.querySelector("#profile")
 //holder of all stuff 
 
 let gitHubUrl = "https://api.github.com/users/dortizkosobucki"
@@ -68,7 +68,7 @@ function buildProfile(profileData) {
     console.log(profileData)
     //page element that everything is dumping into
     let pageElement = document.createElement("div")
-    pageElement.classList.add("profile")
+    pageElement.classList.add("#profile")
     //picture
     let imageElement = document.createElement("img")
     imageElement.src = `${profileData.avatar_url}`
@@ -80,25 +80,25 @@ function buildProfile(profileData) {
     pageElement.appendChild(nameElement)
     //location
     let locationElement = document.createElement("p")
-    locationElement.innerText = `${profileData.location}`
+    locationElement.innerText = `Located in ${profileData.location}`
     pageElement.appendChild(locationElement)
+    //bio
+    let bioElement = document.createElement("p")
+    bioElement.innerText = `A little about me: ${profileData.bio}`
+    pageElement.appendChild(bioElement)
     //blog
-    let blogElement = document.createElement("a", "#url")
+    let blogElement = document.createElement("a", "url")
     blogElement.innerText = `${profileData.blog}`
     blogElement.href = profileData.blog
     pageElement.appendChild(blogElement)
     //email
-    let emailElement = document.createElement("a", "#email")
+    let emailElement = document.createElement("a", "email")
     emailElement.innerText = "\nd.ortizkosobucki@gmail.com"
     emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
     pageElement.appendChild(emailElement)
-    //bio
-    let bioElement = document.createElement("p")
-    bioElement.innerText = `${profileData.bio}`
-    pageElement.appendChild(bioElement)
     //publicrepos
     let reposElement = document.createElement("p")
-    reposElement.innerText = `${profileData.public_repos}`
+    reposElement.innerText = `Public Repos: ${profileData.public_repos}, see below!`
     pageElement.appendChild(reposElement)
     //final append to the profile stuff 
     profileStuff.appendChild(pageElement)
