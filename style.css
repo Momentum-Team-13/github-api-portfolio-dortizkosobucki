@@ -1,5 +1,7 @@
 body {
-    background-color: aqua;
+    background: url(drew-beamer-vAij-E26haI-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #profile {
@@ -8,6 +10,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: x-large;
+    color: aliceblue;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    background-color: aqua;
+}
+
+p {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
 }
 
 #repos {
@@ -20,12 +36,15 @@ a {
     display: flex;
     flex-flow: wrap column;
     text-decoration: none;
+    text-align: center;
 }
 
 img {
     border-radius: 50%;
     border: 2px solid black;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
 }
 

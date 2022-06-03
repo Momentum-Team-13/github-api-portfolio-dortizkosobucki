@@ -69,15 +69,15 @@ function buildProfile(profileData) {
     //page element that everything is dumping into
     let pageElement = document.createElement("div")
     pageElement.classList.add("#profile")
+    //name
+    let nameElement = document.createElement("h1")
+    nameElement.innerText = `${profileData.name}`
+    pageElement.appendChild(nameElement)
     //picture
     let imageElement = document.createElement("img")
     imageElement.src = `${profileData.avatar_url}`
     imageElement.alt = "Profile Picture"
     pageElement.appendChild(imageElement)
-    //name
-    let nameElement = document.createElement("h1")
-    nameElement.innerText = `${profileData.name}`
-    pageElement.appendChild(nameElement)
     //location
     let locationElement = document.createElement("p")
     locationElement.innerText = `Located in ${profileData.location}`
@@ -87,12 +87,12 @@ function buildProfile(profileData) {
     bioElement.innerText = `A little about me: ${profileData.bio}`
     pageElement.appendChild(bioElement)
     //blog
-    let blogElement = document.createElement("a", "url")
+    let blogElement = document.createElement("a")
     blogElement.innerText = `${profileData.blog}`
     blogElement.href = profileData.blog
     pageElement.appendChild(blogElement)
     //email
-    let emailElement = document.createElement("a", "email")
+    let emailElement = document.createElement("a")
     emailElement.innerText = "\nd.ortizkosobucki@gmail.com"
     emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
     pageElement.appendChild(emailElement)
