@@ -1,11 +1,12 @@
 
 console.log('js is connected!')
 
+
+//REPO THINGS//
 const repoStuff = document.querySelector('#repos')
 //holder of all stuff 
 
 let gitHubUrlRepo = "https://api.github.com/users/dortizkosobucki/repos"
-
 
 fetch(gitHubUrlRepo, {
     method: 'GET',
@@ -24,26 +25,21 @@ fetch(gitHubUrlRepo, {
     })
 
 function buildPage(repoData) {
-    console.log(typeof repoData)
-    let names = repoData.map(function (repo) {
-        return repo.name
-    })
-    console.log(names)
-    elements = names.map(function (name) {
-        return buildRepo(name)
 
-    })
-    console.log("elements", elements)
-    for (let element of elements) {
-        repoStuff.appendChild(element)
+    for (let repo of repoData) {
+        console.log(repo)
+        buildRepo(repo)
     }
 }
 
 function buildRepo(repoName) {
-    let repoEl = document.createElement("p")
-    repoEl.innerText = repoName
-    return repoEl
+    let repoEl = document.createElement("a")
+    repoEl.innerText = repoName.name
+    repoEl.href = repoName.html_url
+    repoStuff.appendChild(repoEl)
 }
+
+//PROFILE THINGS//
 
 const profileStuff = document.querySelector('#profile')
 //holder of all stuff 
@@ -82,6 +78,28 @@ function buildProfile(profileData) {
     let nameElement = document.createElement("h1")
     nameElement.innerText = `${profileData.name}`
     pageElement.appendChild(nameElement)
+    //location
+    let locationElement = document.createElement("p")
+    locationElement.innerText = `${profileData.location}`
+    pageElement.appendChild(locationElement)
+    //blog
+    let blogElement = document.createElement("a", "#url")
+    blogElement.innerText = `${profileData.blog}`
+    blogElement.href = profileData.blog
+    pageElement.appendChild(blogElement)
+    //email
+    let emailElement = document.createElement("a", "#email")
+    emailElement.innerText = "\nd.ortizkosobucki@gmail.com"
+    emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
+    pageElement.appendChild(emailElement)
+    //bio
+    let bioElement = document.createElement("p")
+    bioElement.innerText = `${profileData.bio}`
+    pageElement.appendChild(bioElement)
+    //publicrepos
+    let reposElement = document.createElement("p")
+    reposElement.innerText = `${profileData.public_repos}`
+    pageElement.appendChild(reposElement)
     //final append to the profile stuff 
     profileStuff.appendChild(pageElement)
 }
