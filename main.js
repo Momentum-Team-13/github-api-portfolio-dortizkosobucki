@@ -79,31 +79,32 @@ function buildProfile(profileData) {
     imageElement.src = `${profileData.avatar_url}`
     imageElement.alt = "Profile Picture"
     pageElement.appendChild(imageElement)
-    //location
-    let locationElement = document.createElement("p")
-    locationElement.innerText = `Located in ${profileData.location}`
-    pageElement.appendChild(locationElement)
     //bio
     let bioElement = document.createElement("p")
     bioElement.innerText = `A little about me: ${profileData.bio}`
     pageElement.appendChild(bioElement)
-    //blog
-    let blogElement = document.createElement("a")
-    blogElement.innerText = `${profileData.blog}`
-    blogElement.href = profileData.blog
-    blogElement.classList.add("linkedIn")
-    pageElement.appendChild(blogElement)
-
-    //publicrepos
-    let reposElement = document.createElement("p")
-    reposElement.innerText = `Public Repos: ${profileData.public_repos}, see below!`
-    pageElement.appendChild(reposElement)
     //email
     let emailElement = document.createElement("a")
     emailElement.innerText = "Contact at d.ortizkosobucki@gmail.com"
     emailElement.href = "mailto:d.ortizkosobucki@gmail.com";
     emailElement.classList.add("email")
     pageElement.appendChild(emailElement)
+    //location
+    let locationElement = document.createElement("p")
+    locationElement.innerText = `Located in ${profileData.location}`
+    pageElement.appendChild(locationElement)
+    //blog
+    let blogElement = document.createElement("a")
+    blogElement.innerText = `${profileData.blog}`
+    blogElement.href = profileData.blog
+    blogElement.classList.add("linkedIn")
+    pageElement.appendChild(blogElement)
+    //publicrepos
+    let reposElement = document.createElement("p")
+    reposElement.innerText = `Public Repos: ${profileData.public_repos}, see below!`
+    pageElement.appendChild(reposElement)
+
+
 
 
     //final append to the profile stuff 

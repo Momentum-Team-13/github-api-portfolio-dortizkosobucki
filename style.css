@@ -15,7 +15,6 @@ body {
     padding: 20px;
 }
 
-
 h1 {
     text-align: center;
     background-color: rgba(0, 221, 255, 0.551);
@@ -31,9 +30,6 @@ img {
     justify-content: center;
 }
 
-
-
-
 p {
     background-color: rgba(0, 0, 0, 0.551);
     padding: 30px;
@@ -43,31 +39,32 @@ p {
 
 .linkedIn {
     background-color: rgba(0, 0, 0, 0.551);
-    padding: 30px;
     align-content: center;
     border: 2px white solid;
     width: auto;
     height: auto;
+    text-decoration: white;
+    padding-bottom: 20px;
 }
 
 .email {
     background-color: rgba(0, 0, 0, 0.551);
-    padding: 30px;
     align-content: center;
     border: 2px white solid;
     width: auto;
     height: auto;
+    text-decoration: white;
 }
-
 
 a {
     padding: 30px;
     display: flex;
     flex-direction: column;
+    align-items: space-around;
+    flex-wrap: wrap;
     text-decoration: none;
     text-align: center;
     border: 2px solid white;
-    flex-wrap: wrap;
 }
 
 a:link {
@@ -82,6 +79,19 @@ a:hover {
     color: aqua;
 }
 
+.repos {
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-items: center; */
+}
+
 .repoList {
-    background-color: rgba(237, 131, 18, 0.551);
+    background-color: rgba(255, 132, 0, 0.729);
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
 }
