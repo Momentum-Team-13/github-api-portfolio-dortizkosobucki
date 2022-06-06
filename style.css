@@ -60,7 +60,7 @@ a {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    align-items: center;
     flex-wrap: wrap;
     text-decoration: none;
     text-align: center;
@@ -77,14 +77,6 @@ a:visited {
 
 a:hover {
     color: aqua;
-}
-
-.repos {
-    display: flex;
-    /* flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-items: center; */
 }
 
 .repoList {
